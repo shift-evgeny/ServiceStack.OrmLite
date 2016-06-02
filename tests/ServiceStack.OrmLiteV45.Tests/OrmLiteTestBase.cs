@@ -13,11 +13,11 @@ namespace ServiceStack.OrmLite.Tests
         public static string SqliteFileDir = "~/App_Data/".MapAbsolutePath();
         public static string SqliteFileDb = "~/App_Data/db.sqlite".MapAbsolutePath();
         public static string SqlServerDb = "~/App_Data/Database1.mdf".MapAbsolutePath();
-        public static string SqlServerBuildDb = "Server=localhost;Database=test;User Id=test;Password=test;";
+        public static string SqlServerBuildDb = @"Data Source=.\SQLEXPRESS;Initial Catalog=OrmLiteUnitTests;Integrated Security=true;"; // "Server=localhost;Database=test;User Id=test;Password=test;";
         //public static string SqlServerBuildDb = "Data Source=localhost;Initial Catalog=TestDb;Integrated Security=SSPI;Connect Timeout=120;MultipleActiveResultSets=True";
 
         public static string MySqlDb = "Server=localhost;Database=test;UID=root;Password=test";
-        public static string PostgreSqlDb = "Server=localhost;Port=5432;User Id=test;Password=test;Database=test;Pooling=true;MinPoolSize=0;MaxPoolSize=200";
+        public static string PostgreSqlDb = "Server=127.0.0.1;Port=5432;IntegratedSecurity=true;Database=OrmLiteUnitTests;Pooling=true;MinPoolSize=0;MaxPoolSize=200"; // "Server=localhost;Port=5432;User Id=test;Password=test;Database=test;Pooling=true;MinPoolSize=0;MaxPoolSize=200";
 
         public static IOrmLiteDialectProvider DefaultProvider = SqlServerDialect.Provider;
         public static string DefaultConnection = SqlServerBuildDb;
